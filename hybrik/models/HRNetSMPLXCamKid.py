@@ -67,7 +67,7 @@ class HRNetSMPLXCamKid(nn.Module):
             kwargs['HRNET_TYPE'], num_joints=71,
             depth_dim=self.depth_dim,
             is_train=True, generate_feat=True, generate_hm=True,
-            pretrain=kwargs['HR_PRETRAINED'])
+            pretrain=kwargs['HR_PRETRAINED'],root=kwargs["ROOT"])
         self.pretrain_hrnet = kwargs['HR_PRETRAINED']
 
         self.smplx_layer = SMPLXLayer(
